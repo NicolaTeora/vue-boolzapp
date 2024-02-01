@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuovo Progetto</title>
+    <title>BoolZapp</title>
 
     <!-- Fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -22,10 +22,60 @@
     <script type="text/javascript" src="./JS/main.js" defer></script>
 </head>
 <body>
-    <div id="app">
-        <div class="container mt-3">
-            <h1></h1>
-            <!-- code -->
+    <div id="app" class="pt-3 pt-3">
+        <div class="container border">
+            <div class="row">
+                <div id="phone-book" class="col-4 border p-0">
+                    
+                    <!-- barra utente -->
+                    <div class="user-bar p-2">
+                        <div>
+                            <img src="./img/avatar_io.jpg" alt="">
+                            <span class="ms-2">Sofia</span>
+                        </div>
+                        <!-- set icone barra utente -->
+                        <div>
+                            <span class="me-2"><i class="fa-solid fa-circle-notch"></i></span>
+                            <span class="me-2"><i class="fa-regular fa-message"></i></span>
+                            <span class="me-2"><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                        </div>                        
+                    </div>
+
+                    <!-- barra opzione notifiche -->
+                    <div class="notification-bar p-3">
+                        <span class="on-of-notification"><i class="fa-solid fa-bell-slash fa-xl"></i></span>
+                        <div class="ms-2">
+                            <span>Ricevi notifiche di nuovi messaggi</span> <br>
+                            <span>Attiva notifiche desktop</span>
+                        </div>
+                    </div>
+
+                    <!-- barra di ricerca -->
+                    <div class="input-group input-group-sm p-2">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                    </div>
+
+                    <!-- lista delle chat -->
+                    <div>
+                        <ul class="list-group list-group-flush">
+                            <li v-for="(person, index) in contacts" class="list-group-item d-flex">
+                                <div>
+                                    <img :src="'./img/avatar_'+ index +'.jpg'" alt="">
+                                </div>
+                                <div class="ms-2">
+                                    <span>{{ person.name }}</span> <br>
+                                    <span>Ultimo messaggio inviato</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="col-8"></div>
+            </div>          
         </div>
     </div>
 

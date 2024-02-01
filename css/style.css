@@ -1,0 +1,34 @@
+.container{
+    height: 90vh;
+}
+
+/* regole generali */
+img{
+    border-radius: 50%;
+    width: 50px;
+}
+
+/* barra utente  */
+.user-bar{
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: lightgray;
+}
+
+/* barra opzione notifiche */
+.notification-bar{
+    height: 75px;
+    display: flex;
+    align-items: center;
+
+    background-color: rgb(154, 208, 230);
+}
+
+.on-of-notification{
+    padding: 1.1rem;
+    border-radius: 50%;
+    background-color: whitesmoke;
+}
