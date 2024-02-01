@@ -51,5 +51,15 @@ ul li:hover{
 
 /* Main chat */
 #main-chat{
+    position: relative;
+
     background-image: url(../img/mine.jpg);
+}
+
+#footer-main-chat{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+
+    background-color: wheat;
 }
