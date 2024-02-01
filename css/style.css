@@ -3,6 +3,7 @@
 }
 
 #app{
+    height: 100vh;
     background: linear-gradient(#009688 15%, #dbdbd2 15%);
 }
 
@@ -12,7 +13,13 @@ img{
     width: 50px;
 }
 
-/* barra utente */ /* barra utente-Main chat */
+ul li:hover{
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+/* barra utente */ 
+/* barra utente-Main chat */
 .user-bar{
     height: 75px;
     display: flex;
@@ -29,6 +36,11 @@ img{
     align-items: center;
 
     background-color: rgb(154, 208, 230);
+}
+
+/* barra di richerca chat */
+#search-bar{
+    background-color: whitesmoke;
 }
 
 .on-of-notification{

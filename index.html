@@ -23,8 +23,11 @@
 </head>
 <body>
     <div id="app" class="pt-3 pt-3">
+        
         <div class="container">
+            
             <div class="row">
+                
                 <div id="phone-book" class="col-4 border p-0">
                     
                     <!-- barra utente -->
@@ -35,15 +38,23 @@
                         </div>
                         <!-- set icone barra utente -->
                         <div>
-                            <span class="me-2"><i class="fa-solid fa-circle-notch"></i></span>
-                            <span class="me-2"><i class="fa-regular fa-message"></i></span>
-                            <span class="me-2"><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                            <span class="me-2">
+                                <i class="fa-solid fa-circle-notch fa-lg"></i>
+                            </span>
+                            <span class="me-2">
+                                <i class="fa-regular fa-message fa-lg"></i>
+                            </span>
+                            <span class="me-2">
+                                <i class="fa-solid fa-ellipsis-vertical fa-lg"></i>
+                            </span>
                         </div>                        
                     </div>
 
                     <!-- barra opzione notifiche -->
                     <div class="notification-bar p-3">
-                        <span class="on-of-notification"><i class="fa-solid fa-bell-slash fa-xl"></i></span>
+                        <span class="on-of-notification">
+                            <i class="fa-solid fa-bell-slash fa-xl"></i>
+                        </span>
                         <div class="ms-2">
                             <span>Ricevi notifiche di nuovi messaggi</span> <br>
                             <span>Attiva notifiche desktop</span>
@@ -51,7 +62,7 @@
                     </div>
 
                     <!-- barra di ricerca -->
-                    <div class="input-group input-group-sm p-2">
+                    <div id="search-bar" class="input-group input-group-sm p-2">
                         <span class="input-group-text" id="inputGroup-sizing-sm">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </span>
@@ -76,6 +87,8 @@
 
                 <!-- main chat -->
                 <div id="main-chat" class="col-8 p-0">
+                    
+                    <!-- barra utente main chat -->
                     <div class="user-bar p-2">
                         <div class="d-flex">
                             <div>
@@ -86,8 +99,23 @@
                                 <span class="ms-2">{{lastAccess}}</span>
                             </div>
                         </div>
+                        <!-- set icone barra utente main chat -->
+                        <div>
+                            <span class="me-3">
+                                <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+                            </span>
+                            <span class="me-3">
+                                <i class="fa-solid fa-paperclip fa-lg"></i>
+                            </span>
+                            <span class="me-3">
+                                <i class="fa-solid fa-ellipsis-vertical fa-lg"></i>
+                            </span>
+                        </div>       
                     </div>
+                    
+                    <!-- Input per invio msg -->
                 </div>
+
             </div>          
         </div>
     </div>
