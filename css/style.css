@@ -2,6 +2,10 @@
     height: 90vh;
 }
 
+#app{
+    background: linear-gradient(#009688 15%, #dbdbd2 15%);
+}
+
 /* regole generali */
 img{
     border-radius: 50%;
@@ -15,7 +19,7 @@ img{
     justify-content: space-between;
     align-items: center;
 
-    background-color: lightgray;
+    background-color: rgb(233, 233, 233);
 }
 
 /* barra opzione notifiche */
