@@ -23,7 +23,7 @@
 </head>
 <body>
     <div id="app" class="pt-3 pt-3">
-        <div class="container border">
+        <div class="container">
             <div class="row">
                 <div id="phone-book" class="col-4 border p-0">
                     
@@ -67,14 +67,27 @@
                                 </div>
                                 <div class="ms-2">
                                     <span>{{ person.name }}</span> <br>
-                                    <span>Ultimo messaggio inviato</span>
+                                    <span>{{previewMsg}}</span>
                                 </div>
                             </li>
                         </ul>
                     </div>
-
                 </div>
-                <div class="col-8"></div>
+
+                <!-- main chat -->
+                <div id="main-chat" class="col-8 p-0">
+                    <div class="user-bar p-2">
+                        <div class="d-flex">
+                            <div>
+                                <img :src="contacts[0].avatar" alt="">
+                            </div>
+                            <div>
+                                <span class="ms-2">{{contacts[0].name}}</span> <br>
+                                <span class="ms-2">{{lastAccess}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>          
         </div>
     </div>

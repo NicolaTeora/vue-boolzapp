@@ -166,7 +166,10 @@ const app = createApp({
                     ],
                 }
                 
-            ]
+            ],
+
+            previewMsg: 'Ultimo messaggio inviato',
+            lastAccess: 'Ultimo accesso oggi alle 12:00'
         };
     },
 
