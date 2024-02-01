@@ -34,7 +34,7 @@
                     <div class="user-bar p-2">
                         <div>
                             <img src="./img/avatar_io.jpg" alt="">
-                            <span class="ms-2">Sofia</span>
+                            <span class="ms-2 fw-semibold">Sofia</span>
                         </div>
                         <!-- set icone barra utente -->
                         <div>
@@ -56,8 +56,8 @@
                             <i class="fa-solid fa-bell-slash fa-xl"></i>
                         </span>
                         <div class="ms-2">
-                            <span>Ricevi notifiche di nuovi messaggi</span> <br>
-                            <span>Attiva notifiche desktop</span>
+                            <span class="fw-semibold">Ricevi notifiche di nuovi messaggi</span> <br>
+                            <span class="fw-lighter text-decoration-underline info-chat">Attiva notifiche desktop</span>
                         </div>
                     </div>
 
@@ -77,8 +77,8 @@
                                     <img :src="person.avatar" alt="">
                                 </div>
                                 <div class="ms-2">
-                                    <span>{{ person.name }}</span> <br>
-                                    <span>{{previewMsg}}</span>
+                                    <span class="fw-semibold">{{ person.name }}</span> <br>
+                                    <span class="fw-lighter info-chat">{{previewMsg}}</span>
                                 </div>
                             </li>
                         </ul>
@@ -95,8 +95,8 @@
                                 <img :src="contacts[0].avatar" alt="">
                             </div>
                             <div>
-                                <span class="ms-2">{{contacts[0].name}}</span> <br>
-                                <span class="ms-2">{{lastAccess}}</span>
+                                <span class="ms-2 fw-semibold">{{contacts[0].name}}</span> <br>
+                                <span class="ms-2 fw-lighter info-chat">{{lastAccess}}</span>
                             </div>
                         </div>
                         <!-- set icone barra utente main chat -->
@@ -112,13 +112,28 @@
                             </span>
                         </div>       
                     </div>
+
+                    <!-- area messaggi -->
+                    <!-- messaggi inviati -->
+                    <div class="p-4 d-flex flex-column align-items-end">
+                        <span class="msg sent">{{ contacts[0].message[0].message}}</span>
+                        <span class="msg sent">{{ contacts[0].message[1].message}}</span>
+                    </div>
+
+                    <!-- messaggi ricevuti -->
+                    <div class="p-4 d-flex flex-column ">
+                        <span class="msg received">{{ contacts[0].message[2].message}}</span>
+                    </div>
                     
                     <!-- Input per invio msg -->
-                    <div id="footer-main-chat" class="p-3">
-                        <div class="input-group">
-                            <span class="input-group-text" id="basic-addon1">@</span>
-                            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                        </div>                          
+                    <div id="footer-main-chat" class="d-flex justify-content-between align-items-center p-3">
+                        <span class="ms-3">
+                            <i class="fa-regular fa-face-smile fa-lg"></i>
+                        </span>
+                        <input type="text" placeholder="Scrivi un messaggio" class="form-control sent-chat">
+                        <span class="me-3">
+                            <i class="fa-solid fa-microphone fa-lg"></i>                   
+                        </span>    
                     </div>
 
                 </div>

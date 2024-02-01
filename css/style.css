@@ -18,6 +18,12 @@ ul li:hover{
     cursor: pointer;
 }
 
+/* style font */
+.info-chat{
+    font-size: small;
+    color: rgb(122, 122, 122);
+}
+
 /* barra utente */ 
 /* barra utente-Main chat */
 .user-bar{
@@ -56,10 +62,30 @@ ul li:hover{
     background-image: url(../img/mine.jpg);
 }
 
+.msg{
+    width: fit-content;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.sent{
+    background-color: lightgreen;
+}
+
+.received{
+    background-color: whitesmoke;
+}
+
 #footer-main-chat{
     width: 100%;
     position: absolute;
     bottom: 0;
 
     background-color: wheat;
+}
+
+/* input chat */
+.sent-chat{
+    width: 80%;
 }
