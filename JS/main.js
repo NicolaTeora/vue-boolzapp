@@ -8,7 +8,7 @@ const app = createApp({
                     name: 'Michele',
                     avatar: './img/avatar_1.jpg',
                     visible: true,
-                    message: [
+                    messages: [
                         {
                             date: '10/01/2020 15:30:55',
                             message: 'Hai portato a spasso il cane?',
@@ -169,19 +169,24 @@ const app = createApp({
             ],
 
             previewMsg: 'Ultimo messaggio inviato',
-            lastAccess: 'Ultimo accesso oggi alle 12:00'
+            lastAccess: 'Ultimo accesso oggi alle 12:00',
+            chatActive: 0,
+            
         };
     },
 
     methods: {
-        printHello() {
-            console.log('hi Vue');
-        },
+        lastMessageView(messages){
+            const lastMessage = messages.filter((message)=>{
+                return message.status == 'received'
+            });
+
+            const lastMessageSent = lastMessage[lastMessage.length - 1];
+            return lastMessageSent.message;
+        }
     },
 
-    mounted() {
-        this.printHello();
-    },
+    mounted() {},
 });
 
 app.mount('#app')

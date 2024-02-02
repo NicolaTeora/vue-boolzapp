@@ -78,7 +78,7 @@
                                 </div>
                                 <div class="ms-2">
                                     <span class="fw-semibold">{{ person.name }}</span> <br>
-                                    <span class="fw-lighter info-chat">{{previewMsg}}</span>
+                                    <span class="fw-lighter info-chat">{{ lastMessageView(person.messages) }}</span>
                                 </div>
                             </li>
                         </ul>
@@ -116,13 +116,13 @@
                     <!-- area messaggi -->
                     <!-- messaggi inviati -->
                     <div class="p-4 d-flex flex-column align-items-end">
-                        <span class="msg sent">{{ contacts[0].message[0].message}}</span>
-                        <span class="msg sent">{{ contacts[0].message[1].message}}</span>
+                        <span class="msg sent">{{ contacts[0].messages[0].message}}</span>
+                        <span class="msg sent">{{ contacts[0].messages[1].message}}</span>
                     </div>
 
                     <!-- messaggi ricevuti -->
                     <div class="p-4 d-flex flex-column ">
-                        <span class="msg received">{{ contacts[0].message[2].message}}</span>
+                        <span class="msg received">{{ contacts[0].messages[2].message}}</span>
                     </div>
                     
                     <!-- Input per invio msg -->
