@@ -176,13 +176,9 @@ const app = createApp({
     },
 
     methods: {
-        lastMessageView(messages){
-            const lastMessage = messages.filter((message)=>{
-                return message.status == 'received'
-            });
-
-            const lastMessageSent = lastMessage[lastMessage.length - 1];
-            return lastMessageSent.message;
+        lastMessageInChat(messages){
+            const utlimoMsg = messages[messages.length -1].message
+            return utlimoMsg;
         }
     },
 

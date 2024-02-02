@@ -78,7 +78,7 @@
                                 </div>
                                 <div class="ms-2">
                                     <span class="fw-semibold">{{ person.name }}</span> <br>
-                                    <span class="fw-lighter info-chat">{{ lastMessageView(person.messages) }}</span>
+                                    <span class="fw-lighter info-chat">{{ lastMessageInChat(person.messages) }}</span>
                                 </div>
                             </li>
                         </ul>
@@ -92,10 +92,10 @@
                     <div class="user-bar p-2">
                         <div class="d-flex">
                             <div>
-                                <img :src="contacts[0].avatar" alt="">
+                                <img :src="contacts[chatActive].avatar" alt="">
                             </div>
                             <div>
-                                <span class="ms-2 fw-semibold">{{contacts[0].name}}</span> <br>
+                                <span class="ms-2 fw-semibold">{{contacts[chatActive].name}}</span> <br>
                                 <span class="ms-2 fw-lighter info-chat">{{lastAccess}}</span>
                             </div>
                         </div>
