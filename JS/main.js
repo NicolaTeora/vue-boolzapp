@@ -179,6 +179,10 @@ const app = createApp({
         lastMessageInChat(messages){
             const utlimoMsg = messages[messages.length -1].message
             return utlimoMsg;
+        },
+
+        selectChat(index){
+            this.chatActive = index;
         }
     },
 
