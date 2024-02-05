@@ -167,14 +167,14 @@ const app = createApp({
                 }
                 
             ],
-
+            //nuovo messaggio da inserire tramite input
             newMessageSent:{
                 date: '',
                 message: '',
                 status: 'sent',
             },
 
-            previewMsg: 'Ultimo messaggio inviato',
+            previewMsg: 'Ultimo messaggio: ',
             //lastAccess: 'Ultimo accesso oggi alle 12:00',
             chatActive: 0,
             
@@ -194,8 +194,20 @@ const app = createApp({
             return lastAccess;
         },
 
+        //selezione l'elemento con indice attivo
         selectChat(index){
             this.chatActive = index;
+        },
+
+        //imposto il metodo per inviare nuovi messaggi
+        sentNewMessage(){
+            const newMessageCopy = {...this.newMessageSent};
+            if (newMessageCopy.message.length == 0){
+                return
+            } else {
+                this.contacts[this.chatActive].messages.push(newMessageCopy);
+                this.newMessageSent.message = '';
+            }
         }
     },
 
