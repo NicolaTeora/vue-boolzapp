@@ -96,7 +96,7 @@
                             </div>
                             <div>
                                 <span class="ms-2 fw-semibold">{{contacts[chatActive].name}}</span> <br>
-                                <span class="ms-2 fw-lighter info-chat">{{}}</span>
+                                <span class="ms-2 fw-lighter info-chat">{{ lastMessageForAccess(contacts[chatActive].messages) }}</span>
                             </div>
                         </div>
                         <!-- set icone barra utente main chat -->
@@ -127,7 +127,7 @@
                         <span class="ms-3">
                             <i class="fa-regular fa-face-smile fa-lg"></i>
                         </span>
-                        <input type="text" placeholder="Scrivi un messaggio" class="form-control sent-chat">
+                        <input type="text" placeholder="Scrivi un messaggio" class="form-control sent-chat" v-model="newMessageSent.message">
                         <span class="me-3">
                             <i class="fa-solid fa-microphone fa-lg"></i>                   
                         </span>    

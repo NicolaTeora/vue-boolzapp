@@ -168,6 +168,12 @@ const app = createApp({
                 
             ],
 
+            newMessageSent:{
+                date: '',
+                message: '',
+                status: 'sent',
+            },
+
             previewMsg: 'Ultimo messaggio inviato',
             //lastAccess: 'Ultimo accesso oggi alle 12:00',
             chatActive: 0,
@@ -176,12 +182,17 @@ const app = createApp({
     },
 
     methods: {
+        //visualizzo anteprima ultimo messaggio in chat
         lastMessageInChat(messages){
             const utlimoMsg = messages[messages.length -1].message
             return utlimoMsg;
         },
 
-        
+        //visualizzo ultimo Accesso in base ha ultimo messaggio in chat
+        lastMessageForAccess(messages){
+            const lastAccess = messages[messages.length -1].date
+            return lastAccess;
+        },
 
         selectChat(index){
             this.chatActive = index;
