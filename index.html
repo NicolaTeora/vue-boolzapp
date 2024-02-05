@@ -51,7 +51,7 @@
                     </div>
 
                     <!-- barra opzione notifiche -->
-                    <div class="notification-bar p-3">
+                    <div class="notification-bar p-2">
                         <span class="on-of-notification">
                             <i class="fa-solid fa-bell-slash fa-xl"></i>
                         </span>
@@ -96,7 +96,7 @@
                             </div>
                             <div>
                                 <span class="ms-2 fw-semibold">{{contacts[chatActive].name}}</span> <br>
-                                <span class="ms-2 fw-lighter info-chat">{{lastAccess}}</span>
+                                <span class="ms-2 fw-lighter info-chat">{{}}</span>
                             </div>
                         </div>
                         <!-- set icone barra utente main chat -->
@@ -114,16 +114,13 @@
                     </div>
 
                     <!-- area messaggi -->
-                    <!-- messaggi inviati -->
-                    <div class="p-4 d-flex flex-column align-items-end">
-                        <span class="msg sent">{{ contacts[0].messages[0].message}}</span>
-                        <span class="msg sent">{{ contacts[0].messages[1].message}}</span>
+                    <div class="p-4 d-flex flex-column " v-for="message in contacts[chatActive].messages">
+                        <!-- messaggi inviati -->
+                        <span class="msg sent align-self-end" v-if="message.status == 'sent'">{{ message.message}}</span>
+                        <!-- messaggi ricevuti -->
+                        <span class="msg received align-self-start" v-if="message.status == 'received'">{{ message.message}}</span>
                     </div>
 
-                    <!-- messaggi ricevuti -->
-                    <div class="p-4 d-flex flex-column ">
-                        <span class="msg received">{{ contacts[0].messages[2].message}}</span>
-                    </div>
                     
                     <!-- Input per invio msg -->
                     <div id="footer-main-chat" class="d-flex justify-content-between align-items-center p-3">

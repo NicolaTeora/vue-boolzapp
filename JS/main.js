@@ -169,7 +169,7 @@ const app = createApp({
             ],
 
             previewMsg: 'Ultimo messaggio inviato',
-            lastAccess: 'Ultimo accesso oggi alle 12:00',
+            //lastAccess: 'Ultimo accesso oggi alle 12:00',
             chatActive: 0,
             
         };
@@ -180,6 +180,8 @@ const app = createApp({
             const utlimoMsg = messages[messages.length -1].message
             return utlimoMsg;
         },
+
+        
 
         selectChat(index){
             this.chatActive = index;
