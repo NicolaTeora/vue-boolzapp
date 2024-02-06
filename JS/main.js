@@ -208,7 +208,9 @@ const app = createApp({
                 this.contacts[this.chatActive].messages.push(newMessageCopy);
                 this.newMessageSent.message = '';
             }
-        }
+        },
+
+        
     },
 
     mounted() {},
